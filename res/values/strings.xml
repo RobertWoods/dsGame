@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Data Structures!</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <!--Main Menu Strings  -->
+    <string name="main_menu_welcome">Choose a Data Structure!</string>
+    <string name="ll_button">Linked Lists</string>
+    <string name="hash_table_button">Hash Tables</string>
+	<string name="binary_tree_button">Binary Trees</string>
+	<string name="heap_button">Heaps</string>
+	<string name="graph_button">Graphs</string>
+	<string name="stacks_and_queues_button">Stacks/Queues</string>
+	<!-- Data Structure Menu Strings -->
+	<string name="graph_welcome">Graphs</string>
+	<!-- Generic Strings -->
+	<string name="learn_button">What are they?</string>
+	<string name="wiki_button">Read more online</string>
+	<string name="review_button">Review Knowledge</string>
+</resources>
