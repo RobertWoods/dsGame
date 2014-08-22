@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp" >
+        
+        <Button
+            android:id="@+id/pushButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPushClick"
+            android:text="@string/push"
+            android:layout_marginRight="20dp"
+            style="?attr/buttonBarButtonStyle" />
+        
+        <View 
+            android:layout_height="fill_parent"
+            android:layout_width="1dp"
+            android:background="#47B56C"/>
+
+        <Button
+            android:id="@+id/popButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onPopClick"
+            android:text="@string/pop"
+            android:layout_marginLeft="20dp"
+            style="?attr/buttonBarButtonStyle" />
+
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+        	android:layout_marginTop="20dp" />
+    </LinearLayout>
+
+</LinearLayout>

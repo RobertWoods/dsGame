@@ -1,0 +1,101 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/post_traversal" />
+
+    <ImageView
+        android:id="@+id/nodeDepth0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/circle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/nodeDepth11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginRight="60dp"
+            android:src="@drawable/circle" />
+
+        <ImageView
+            android:id="@+id/nodeDepth12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:layout_marginLeft="60dp"
+            android:src="@drawable/circle" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:weightSum="4" >
+
+        <ImageView
+            android:id="@+id/nodeDepth21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:layout_marginLeft="20dp"
+            android:visibility="invisible" />
+
+        <ImageView
+            android:id="@+id/nodeDepth22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:visibility="invisible" />
+        
+        <ImageView
+            android:id="@+id/nodeDepth23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:visibility="invisible" />
+        
+        <ImageView
+            android:id="@+id/nodeDepth24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/circle"
+            android:layout_marginRight="20dp"
+            android:visibility="invisible" />
+        
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:imeOptions="actionSend"
+        android:layout_marginTop="20dp" >
+
+        <requestFocus />
+    </EditText>
+
+
+</LinearLayout>

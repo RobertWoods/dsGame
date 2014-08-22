@@ -1,0 +1,111 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bst_insertion" />
+
+    <TextView
+        android:id="@+id/textSequence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:id="@+id/nodeDepth0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/abc_ab_bottom_solid_dark_holo"
+        android:onClick="onClick"
+        android:background="@drawable/circle" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="2" >
+
+        <Button
+            android:id="@+id/nodeDepth11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/abc_ab_bottom_solid_dark_holo"
+        	android:onClick="onClick"
+        	android:background="@drawable/circle"
+        	style="?android:attr/buttonBarButtonStyle"  />
+
+        <Button
+            android:id="@+id/nodeDepth12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/abc_ab_bottom_solid_dark_holo"
+        	android:onClick="onClick"
+        	android:background="@drawable/circle"
+        	style="?android:attr/buttonBarButtonStyle"  />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:weightSum="4" >
+
+        <Button
+            android:id="@+id/nodeDepth21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+        	android:onClick="onClick"
+        	style="?android:attr/buttonBarButtonStyle"   />
+
+        <Button
+            android:id="@+id/nodeDepth22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+        	android:onClick="onClick"
+        	style="?android:attr/buttonBarButtonStyle"  />
+
+        <Button
+            android:id="@+id/nodeDepth23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="15dp"
+            android:layout_weight="1"
+        	android:onClick="onClick" 
+        	style="?android:attr/buttonBarButtonStyle" />
+
+        <Button
+            android:id="@+id/nodeDepth24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+        	android:onClick="onClick"
+        	style="?android:attr/buttonBarButtonStyle"  />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textDebug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

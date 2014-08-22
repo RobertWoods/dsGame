@@ -2,7 +2,6 @@
 <resources>
 
     <string name="app_name">Data Structures!</string>
-    <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <!--Main Menu Strings  -->
     <string name="main_menu_welcome">Choose a Data Structure!</string>
@@ -14,8 +13,455 @@
 	<string name="stacks_and_queues_button">Stacks/Queues</string>
 	<!-- Data Structure Menu Strings -->
 	<string name="graph_welcome">Graphs</string>
+	<string name="tree_welcome">Trees</string>
+	<string name="bstree_welcome">Binary Search Trees</string>
+	<string name="dlist_welcome">Doubly Linked Lists</string>
+	<string name="hash_welcome">Hash Tables</string>
+	<string name="heap_welcome">Heaps</string>
+	<string name="queue_welcome">Queues</string>
+	<string name="list_welcome">Linked Lists</string>
+	<string name="stack_welcome">Stacks</string>
 	<!-- Generic Strings -->
-	<string name="learn_button">What are they?</string>
+	<string name="learn_button">Implementation</string>
 	<string name="wiki_button">Read more online</string>
-	<string name="review_button">Review Knowledge</string>
+	<string name="review_button">Review</string>
+	<string name="reviewS_button">Review Stacks</string>
+	<string name="reviewQ_button">Review Queues</string>
+	<!--  Game Instructions -->
+	<string name="post_traversal">Return the result from post-order traversal (Left visited first).</string>
+	<string name="in_traversal">Return the result from in-order traversal (Left visited first).</string>
+	<string name="pre_traversal">Return the result from pre-order traversal (Left visited first).</string>
+	<string name="bst_insertion">Fill up the BST! (Children of equal value to their parents are left children)</string>
+	<string name="list_linker">Link the two lists together by traversing either one left to right, and then clicking on the first node in the other list.</string>
+	<string name="graph_instruct">Connect the nodes below to match the adjacent matrix above. The matrix is read left-right, not vertically. Two-way edges must be linked twice, once in each direction.</string>
+	<string name="pop">Pop</string>
+	<string name="push">Push</string>
+	<!--  Array Index Numbers -->
+	<string name="zero">"      0"</string>
+	<string name="one">"      1"</string>
+	<string name="two">"      2"</string>
+	<string name="three">"      3"</string>
+	<string name="four">"      4"</string>
+	<string name="five">"      5"</string>
+	<string name="six">"      6"</string>
+	<string name="seven">"      7"</string>
+	<!-- Graph Letters -->
+	<string name="A">A</string>
+	<string name="B">B</string>
+	<string name="C">C</string>
+	
+	
+	<string name="about">App developed by Robert Woods\n\n\t\t
+	    				 email : rwapps@gmail.com\n\n\t\t
+	    				 twitter : @rwapps\n\n
+	    				 All illustrations courtesy of Brandis Whitfield.\n\n\t\t
+	    				 blog : bwinks.tumblr.com	</string>
+	
+	
+	
+	
+	
+	<!-- Implementation -->
+	<string name="stack">import java.util.LinkedList; \n \n public class Stack { \n \n \t \t public LinkedList&lt;Integer&gt; list; \n \t \t final int STACK = 0; \n \t \t final int QUEUE = 1; \n \t \t int state; \n \n \t \t public Stack(boolean isStack){ \n \t \t \t \t if(isStack){ \n \t \t \t \t \t \t state = STACK; \n \t \t \t \t } else { \n \t \t \t \t \t \t state = QUEUE;
+\n \t \t \t \t } \n \t \t \t \t list = new LinkedList&lt;Integer&gt;(); \n \t \t { \n \n \t \t public Integer pop(){ \n \t \t \t \t Integer integer = list.get(0); \n \t \t \t \t list.remove(0); \n \t \t \t \t return integer; \n \t \t } \n \n \t \t public Integer peek(){ \n \t \t \t \t return list.get(0);
+\n \t \t { \n \n \t \t public void push(int n){ \n \t \t \t \t switch(state){ \n \t \t \t \t case STACK: \n \t \t \t \t \t \t list.addFirst((Integer) n); \n \t \t \t \t \t \t break; \n \t \t \t \t case QUEUE: \n \t \t \t \t \t \t list.addLast((Integer) n); \n \t \t \t \t \t \t break; \n \t \t \t \t }
+\n \t \t } \n }</string>
+	<string name="hash">public class Hash { \n \n \t \t
+	
+	int[] table; \n \t \t
+	public int hash; \n \n \t \t
+	
+	//Hash table key and value type is integer \n \n \t \t
+	//Key for each value is the value \n \n \t \t
+	
+	public Hash(int n){ \n \t \t \t \t
+		table = new int[n]; \n \t \t \t \t
+		setHash(); \n \t \t
+	} \n \n \t \t
+	
+	public void add(int num){ \n \t \t \t \t
+		int pos = ((num*hash)%table.length); \n \t \t \t \t
+		pos = linearProbe(pos); \n \t \t \t \t
+		table[pos]=num; \n \t \t
+	} \n \n \t \t
+	
+	private int linearProbe(int pos) { \n \t \t \t \t
+		while(table[pos]!=0){ \n \t \t \t \t \t \t
+			pos++; \n \t \t \t \t \t \t
+			if(pos>table.length-1){ \n \t \t \t \t \t \t \t \t
+				pos=0; \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		return pos; \n \t \t
+	} \n \n \t \t
+
+	//Sets a random simple hash function per table \n \t \t
+	private void setHash(){  \n \t \t \t \t
+		hash= (int) (Math.random()*15); \n \t \t
+	} \n \n \t \t
+	
+	public int get(int pos){ \n \t \t \t \t
+		return table[pos]; \n \t \t
+	} \n \n
+	
+	} </string>
+	<string name="heap">import java.util.Random; \n \n
+
+public class Heap { \n \n \t \t
+	
+	public int[] array = new int[10]; \n \t \t
+	int lastIndex = 0; \n \n \t \t
+	
+	public Heap(){ \n \t \t \t \t
+		for(int i = 0;i&lt;array.length;i++){ \n \t \t \t \t \t \t
+			array[i]=-1; \n \t \t \t \t
+		} \n \t \t
+	} \n \n \t \t
+	
+	//Inserts and bubbles a new int n \n \t \t
+	//O(1)-O(logn) \n \t \t
+	public void insert(int n){ \n \t \t \t \t
+		array[lastIndex]=n; \n \t \t \t \t
+		swap(lastIndex); \n \t \t \t \t
+		lastIndex++; \n \t \t
+	} \n \n \t \t
+	
+	//Swaps a child and parent when necessary \n \t \t
+	public void swap(int index){ \n \t \t \t \t
+		int parent = computeParent(index); \n \t \t \t \t
+        	int temp = array[parent]; \n \t \t \t \t
+        	if (array[parent] &gt; array[index]) { \n \t \t \t \t \t \t
+            		array[parent] = array[index]; \n \t \t \t \t \t \t
+            		array[index] = temp; \n \t \t \t \t \t \t
+            		swap(parent); \n \t \t \t \t
+        	} \n \t \t
+	} \n \n \t \t
+	
+	//Returns the index of the parent of index child \n \t \t
+	public int computeParent(int child) { \n \t \t \t \t
+        	int parent = 0; \n \t \t \t \t
+        	if (child &gt; 0) { \n \t \t \t \t \t \t
+            		parent = ((child - 1) / 2); \n \t \t \t \t
+        	} \n \t \t \t \t
+        	return parent; \n \t \t 
+    	} \n \n \t \t
+	
+	//Deletes first entry in heap and reshuffles heap \n \t \t
+	//O(logn) \n \t \t
+	public int pop(){ \n \t \t \t \t
+		int x = array[0]; \n \t \t \t \t
+		int currentIndex = 0; \n \t \t \t \t
+		int currentPos=0; \n \t \t \t \t
+		array[0]=array[lastIndex-1]; \n \t \t \t \t
+		while(array[((currentIndex+1)*2-1)]&gt;-1){ \n \t \t \t \t \t \t
+			currentIndex=(currentPos+1)*2-1; \n \t \t \t \t \t \t
+			if(array[currentIndex]&lt;array[currentPos]){ \n \t \t \t \t \t \t \t \t
+				int temp = array[currentIndex]; \n \t \t \t \t \t \t \t \t
+				array[currentIndex]=array[currentPos]; \n \t \t \t \t \t \t \t \t
+				array[currentPos]=temp; \n \t \t \t \t \t \t \t \t
+				currentPos=currentIndex; \n \t \t \t \t \t \t
+			} else if(array[currentIndex]&lt;array[currentPos++]){ \n \t \t \t \t \t \t \t \t
+				currentIndex=(currentPos+1)*2; \n \t \t \t \t \t \t \t \t
+				int temp = array[currentIndex]; \n \t \t \t \t \t \t \t \t
+				array[currentIndex]=array[currentPos]; \n \t \t \t \t \t \t \t \t
+				array[currentPos]=temp; \n \t \t \t \t \t \t \t \t
+				currentPos=currentIndex; \n \t \t \t \t \t \t
+			} else { \n \t \t \t \t \t \t \t \t
+				return x; \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		return x; \n \t \t
+	} \n \n \t \t
+
+	public int peek(){ \n \t \t \t \t
+		return array[0]; \n \t \t
+	} \n \n \t \t
+	
+	//Builds a heap of size n from random Integers from 0-9 \n \t \t
+	public void buildHeap(int n){ \n \t \t \t \t
+		for(int i = 0; i&lt;n;i++){ \n \t \t \t \t \t \t
+			Random rand = new Random(); \n \t \t \t \t \t \t
+			insert(rand.nextInt(10)); \n \t \t \t \t
+		} \n \t \t
+	} \n
+}
+	</string>
+	<string name="graph">import java.util.ArrayList; \nimport java.util.Random; \n \n 
+public class Graph { \n \n \t \t
+	
+	int size=0;\n \n \t \t
+        
+	ArrayList&lt;Node&gt; visited;\n \t \t
+	public int edgeSize;\n \t \t
+	public ArrayList&lt;Node&gt; nodes;\n \n \t \t
+	
+	//Graph type is int, directed, all edge values equal \n \n \t \t
+	
+	public Graph(int s){ \n \t \t \t \t
+            size = s; \n \t \t \t \t
+            nodes = new ArrayList&lt;Node&gt;(s); \n \t \t \t \t
+            visited = new ArrayList&lt;&gt;(s); \n \t \t
+	} \n \n \t \t
+	
+	public void addEdge(Node s, Node v){ \n \t \t \t \t
+		s.edges[s.index]=v; \n \t \t \t \t
+		s.index++; \n \t \t \t \t
+		edgeSize++; \n \t \t
+	} \n \n \t \t
+	
+	public void addNode(Node n){  \n \t \t \t \t
+		nodes.add(n); \n \t \t \t \t 
+		size++; \n \t \t
+	} \n \n \t \t
+	
+	public void addNode(int n){ \n \t \t \t \t 
+		nodes.add(new Node(n)); \n \t \t \t \t 
+		size++; \n \t \t
+	} \n \n \t \t
+	
+	public boolean isReachable(Node a, Node b){ \n \t \t \t \t
+                visited.add(a); \n \t \t \t \t
+		if(a.equals(b)){ \n \t \t \t \t \t \t 
+			return true; \n \t \t \t \t
+		} else { \n \t \t \t \t \t \t
+			for(Node edge : a.edges){ \n \t \t \t \t \t \t \t \t
+				if(!visited.contains(edge) &amp;&amp; edge!=null){ \n \t \t \t \t \t \t \t \t \t \t
+					visited.add(edge); \n \t \t \t \t \t \t \t \t \t \t
+					if(isReachable(edge, b)){ \n \t \t \t \t \t \t \t \t \t \t \t \t 
+						return true; \n \t \t \t \t \t \t \t \t \t \t
+					} \n \t \t \t \t \t \t \t \t 
+				} \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		return false; \n \t \t
+	} \n \n \t \t
+        
+        public void resetVisited(){ \n \t \t \t \t
+            visited = new ArrayList&lt;&gt;(nodes.size()); \n \t \t
+        } \n \n \t \t
+	
+	
+	public void addEdges(Node s, Node v){ \n \t \t \t \t
+		s.edges[s.index]=v; \n \t \t \t \t 
+		edgeSize++; \n \t \t \t \t
+		s.index++; \n \t \t \t \t
+		s.edges[v.index]=s; \n \t \t \t \t
+		v.index++; \n \t \t \t \t
+		edgeSize++; \n \t \t
+	} \n \n \t \t
+	
+	public void fillGraph(){ \n \t \t \t \t
+		Random rand = new Random(); \n \t \t \t \t
+		for(int i = 0;i&lt;size;i++){ \n \t \t \t \t \t \t
+			nodes.add(new Node(rand.nextInt())); \n \t \t \t \t
+		} \n \t \t \t \t
+		for(int i = 0;i&lt;size;i++){ \n \t \t \t \t \t \t
+			for(int j = 0; j&lt;size;j++){ \n \t \t \t \t \t \t \t \t
+				if(rand.nextBoolean()){ \n \t \t \t \t \t \t \t \t \t \t
+					addEdge(nodes.get(i),nodes.get(j)); \n \t \t \t \t \t \t \t \t
+				} \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t
+	} \n \n \t \t
+
+	
+	public class Node { \n \n \t \t \t \t
+
+		public Node[] edges; \n \t \t \t \t
+		public int value; \n \t \t \t \t
+		int index=0; \n \n \t \t \t \t
+
+		public Node(int d) { \n \t \t \t \t \t \t
+			value = d; \n \t \t \t \t \t \t
+			edges = new Node[size]; \n \t \t \t \t
+		} \n \t \t 
+
+	} \n
+	
+}
+	    
+	</string>
+	<string name="list">public class LinkedList { \n \n \t \t
+	
+	Node start; \n \t \t
+	Node last; \n \t \t
+	int length=0; \n \n \t \t
+	
+	public void addFirst(int n){ \n \t \t \t \t
+		if(start==null){ \n \t \t \t \t \t \t
+			start = new Node(n); \n \t \t \t \t \t \t
+			last = start; \n \t \t \t \t
+		} else { \n \t \t \t \t \t \t
+			start.prev=new Node(n); \n \t \t \t \t \t \t
+			start=start.prev; \n \t \t \t \t
+		} \n \t \t \t \t
+		length++; \n \t \t
+	} \n \n \t \t
+	
+	public void addLast(int n){ \n \t \t \t \t
+		if(start==null){ \n \t \t \t \t \t \t
+			start = new Node(n); \n \t \t \t \t \t \t
+			last = start; \n \t \t \t \t
+		} else { \n \t \t \t \t \t \t
+			last.next= new Node(n); \n \t \t \t \t \t \t
+			last = last.next; \n \t \t \t \t
+		} \n \t \t \t \t
+		length++; \n \t \t
+	} \n \n \t \t
+	
+	public void remove(int index){ \n \t \t \t \t
+		Node current = start; \n \t \t \t \t
+		for(int i = 0;i&lt;index;i++){ \n \t \t \t \t \t \t
+			current = current.next; \n \t \t \t \t
+		} \n \t \t \t \t
+		current.next.prev=current.prev; \n \t \t \t \t
+		current.prev.next=current.next; \n \t \t \t \t
+		length--; \n \t \t
+	} \n \n \t \t
+	
+	public void remove(Node n){ \n \t \t \t \t
+		n.next.prev=n.prev; \n \t \t \t \t
+		n.prev.next=n.next; \n \t \t \t \t
+		length--; \n \t \t
+	} \n \n \t \t
+
+	
+	public class Node{ \n \t \t \t \t
+		Node next; \n \t \t \t \t
+		Node prev; \n \t \t \t \t
+		int value; \n \n \t \t
+		
+		public Node(int n){ \n \t \t \t \t \t \t
+			value = n; \n \t \t \t \t
+		} \n \t \t
+	} \n
+
+}</string>
+	<string name="tree">import java.util.Random; \n \n
+
+public class Tree { \n \n \t \t
+
+	public Node rootNode; \n \n \t \t
+	
+	public Tree(){ \n \t \t
+	} \n \t \t
+	//Insertion for tree at random position \n \t \t 
+	public void insertAtRandomPosition(int v) { \n \t \t \t \t
+		if (rootNode == null) { \n \t \t \t \t \t \t
+			rootNode = new Node(v); \n \t \t \t \t \t \t
+			return; \n \t \t \t \t
+		} \n \t \t \t \t
+		int rand = (int) (Math.random() * 2); \n \t \t \t \t
+		Node current = rootNode; \n \t \t \t \t
+		while (current.child[rand] != null) { \n \t \t \t \t \t \t
+			current = current.child[rand]; \n \t \t \t \t \t \t
+			rand = (int) (Math.random() * 2); \n \t \t \t \t \t \t
+			if(current.depth==2){ \n \t \t \t \t \t \t \t \t
+				current=rootNode; \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		current.child[rand] = new Node(v); \n \t \t
+	} \n \n \t \t
+	
+	//Insertion for a Binary Search tree \n \t \t
+	public int bstAdd(int n){ \n \t \t \t \t
+		if (rootNode == null){ \n \t \t \t \t \t \t
+			rootNode = new Node(n); \n \t \t \t \t \t \t
+			return n; \n \t \t \t \t
+		} \n \t \t \t \t
+		Node current = rootNode; \n \t \t \t \t
+		int pos; \n \t \t \t \t
+		if (n > current.value){ \n \t \t \t \t \t \t
+			pos = 1; \n \t \t \t \t
+		} else { \n \t \t \t \t \t \t
+			pos = 0; \n \t \t \t \t
+		} \n \t \t \t \t
+		while(current.child[pos] != null){ \n \t \t \t \t\t \t
+			current = current.child[pos]; \n \t \t \t \t \t \t
+			if(n > current.value){ \n \t \t \t \t \t \t \t \t
+				pos = 1; \n \t \t \t \t \t \t
+			} else { \n \t \t \t \t \t \t \t \t
+				pos = 0; \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		current.child[pos]= new Node(n); \n \t \t \t \t
+		return n; \n \t \t
+	} \n \n \t \t
+	
+	
+	//deletion for bst \n \t \t
+	public void delete(Node n){ \n \t \t \t \t
+		Node current = rootNode; \n \t \t \t \t
+		//Searches for Node n parent \n \t \t \t \t
+		while(current.child[0]!=n &amp;&amp; current.child[1]!=n){ \n \t \t \t \t \t \t
+ 			if(current.value>n.value){ \n \t \t \t \t \t \t \t \t
+				current=current.child[1]; \n \t \t \t \t \t \t
+			} else if(current.value&lt;n.value){ \n \t \t \t \t \t \t \t \t
+				current=current.child[0]; \n \t \t \t \t \t \t
+			} \n \t \t \t \t
+		} \n \t \t \t \t
+		//replaces parent child with n child or null \n \t \t \t \t
+		if(current.child[0]==n){\n \t \t \t \t \t \t
+			if(n.child[1]!=null) current.child[0]=n.child[1];\n \t \t \t \t \t \t
+			else if(n.child[0]!=null) current.child[0]=n.child[0];\n \t \t \t \t \t \t
+			else current.child[0]=null;\n \t \t \t \t
+		} else if (current.child[1]==n){ \n \t \t \t \t \t \t
+			if(n.child[0]!=null) current.child[1]=n.child[0]; \n \t \t \t \t \t \t
+			else if(n.child[1]!=null) current.child[1]=n.child[1]; \n \t \t \t \t \t \t
+			else current.child[1]=null; \n \t \t \t \t
+		} \n \t \t
+	} \n \n \t \t
+
+	public String inTraverse(Node node) { \n \t \t \t \t
+		String string=\"\",left=\" \",right = \" \"; \n \t \t \t \t
+		if (node.child[0] != null) { \n \t \t \t \t \t \t
+			left = inTraverse(node.child[0]); \n \t \t \t \t
+		} \n \t \t \t \t
+		String middle = \" \" + node.value; \n \t \t \t \t
+
+		if (node.child[1] != null) { \n \t \t \t \t \t \t
+			right = inTraverse(node.child[1]); \n \t \t \t \t
+		} \n \t \t \t \t
+		string = left + middle + right; \n \t \t \t \t
+		return string; \n \t \t
+	} \n \n \t \t
+
+	public String preTraverse(Node node) { \n \t \t \t \t
+		String string=\" \",left=\" \",right = \" \"; \n \t \t \t \t
+		if (node.child[0] != null) { \n \t \t \t \t
+			left = preTraverse(node.child[0]); \n \t \t \t \t \t \t
+		} \n \t \t \t \t
+		String middle = \" \" + node.value; \n \t \t \t \t
+		if (node.child[1] != null) { \n \t \t \t \t \t \t
+			right = preTraverse(node.child[1]); \n \t \t \t \t
+		} \n \t \t \t \t
+		string = middle + left + right; \n \t \t \t \t
+		return string; \n \t \t
+	} \n \n \t \t
+
+	public String postTraverse(Node node) { \n \t \t \t \t
+		String string=\" \",left=\" \",right = \" \"; \n \t \t \t \t
+		if (node.child[0] != null) { \n \t \t \t \t \t \t
+			left = postTraverse(node.child[0]); \n \t \t \t \t
+		} \n \t \t \t \t
+		String middle = \" \" + node.value; \n \t \t \t \t
+		if (node.child[1] != null) { \n \t \t \t \t \t \t
+			right = postTraverse(node.child[1]); \n \t \t \t \t
+		} \n \t \t \t \t
+		string = left + right + middle; \n \t \t \t \t
+		return string; \n \t \t
+	} \n \n \t \t
+
+	public class Node { \n \t \t \t \t
+
+		public Node[] child = new Node[2]; \n \t \t \t \t
+		public int value; \n \n \t \t \t \t
+
+		public Node(int v) { \n \t \t \t \t \t \t
+			value = v; \n \t \t \t \t
+		} \n \n \t \t
+		
+	} \n \n
+
+}</string>
 </resources>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.robert.datastructures.LinearLayoutPlus xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/graphLayout" >
+
+    <TextView
+        android:id="@+id/graphInstructions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/graph_instruct" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp" >
+
+        <TextView
+            android:id="@+id/textHorizA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="@string/A" />
+
+        <TextView
+            android:id="@+id/textHorizB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="50dp"
+            android:text="@string/B" />
+
+        <TextView
+            android:id="@+id/textHorizC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/C" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp" >
+
+        <TextView
+            android:id="@+id/textVertA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/A" />
+
+        <Button
+            android:id="@+id/graphButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton13"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/textVertB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/B" />
+
+        <Button
+            android:id="@+id/graphButton21"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+
+        <TextView
+            android:id="@+id/textVertC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:text="@string/C" />
+
+        <Button
+            android:id="@+id/graphButton31"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton32"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+
+        <Button
+            android:id="@+id/graphButton33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/square" />
+    </LinearLayout>
+        
+        
+        <Button
+        android:id="@+id/node1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/circle"
+        android:text="@string/A"
+        android:onClick="onClick" />
+        
+        
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:id="@+id/layout2" >
+        
+        <Button
+            android:id="@+id/node2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/circle"
+            android:onClick="onClick"
+            android:text="@string/B" />
+
+        <Button
+            android:id="@+id/node3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/circle"
+            android:onClick="onClick"
+            android:text="@string/C" />
+    </LinearLayout>
+    
+	<TextView
+            android:id="@+id/textCurrentNode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="60dp" />
+        
+
+
+</com.robert.datastructures.LinearLayoutPlus>
