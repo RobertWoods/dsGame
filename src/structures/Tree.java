@@ -86,7 +86,7 @@ public class Tree {
 	
 	public void delete(Node n){
 		Node current = rootNode;
-		//Searches for Node n parent
+		//Searches for Node n parent in O(logn)
 		while(current.child[0]!=n && current.child[1]!=n){
 			if(current.value>n.value){
 				current=current.child[1];

@@ -392,7 +392,7 @@ public class Tree { \n \n \t \t
 	//deletion for bst \n \t \t
 	public void delete(Node n){ \n \t \t \t \t
 		Node current = rootNode; \n \t \t \t \t
-		//Searches for Node n parent \n \t \t \t \t
+		//Searches for Node n parent in O(logn)  \n \t \t \t \t
 		while(current.child[0]!=n &amp;&amp; current.child[1]!=n){ \n \t \t \t \t \t \t
  			if(current.value>n.value){ \n \t \t \t \t \t \t \t \t
 				current=current.child[1]; \n \t \t \t \t \t \t

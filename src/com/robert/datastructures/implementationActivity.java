@@ -28,15 +28,17 @@ public class implementationActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_implementation);
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		setText();
-	}
-	
-	public void setText(){
-		int text;
+		
 		Intent intent = getIntent();
 		int key = intent.getIntExtra("key", 0);
+		if(key==ABOUT) setContentView(R.layout.activity_about);
+		else setContentView(R.layout.activity_implementation);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
+		setText(key);
+	}
+	
+	public void setText(int key){
+		int text;
 		TextView view = (TextView) findViewById(R.id.implementationText);
 		switch(key){
 		case BINARY_SEARCH_TREE:
@@ -72,7 +74,7 @@ public class implementationActivity extends Activity {
 			break;
 		}
 		view.setText(text);
-		view.setMovementMethod(new ScrollingMovementMethod());
+	//	view.setMovementMethod(new ScrollingMovementMethod());
 	}
 	
 	public void setAbout(){
