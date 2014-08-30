@@ -3,6 +3,7 @@ package com.robert.datastructures;
 import structures.Hash;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,6 +26,16 @@ public class hashInsertionActivity extends Activity {
 		gameSetUp();
 	}
 	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
+	}
+	
 	private void gameSetUp(){
 		setHash();
 		setText();
@@ -37,7 +48,8 @@ public class hashInsertionActivity extends Activity {
 	
 	private void setHash(){
 		hash = new Hash(8);
-		hash.fillTable();
+		hash.setEntries();
+		hash.addNextEntry();
 		table = hash.unhashedTable;
 		currentNumber = table[currentIndex];
 		currentIndex++;
@@ -146,7 +158,9 @@ public class hashInsertionActivity extends Activity {
 		if(winCounter>=8){
 			Toast.makeText(this, "Correct", Toast.LENGTH_SHORT).show();
 		} else {
+			hash.addNextEntry();
 			updateIndex();
+			updateText();
 		}
 	}
 	
@@ -157,12 +171,13 @@ public class hashInsertionActivity extends Activity {
 		instrText.setText(getInstructions());
 	}
 	
+	private void updateText(){
+		TextView numberText = (TextView) findViewById(R.id.textView2);
+		numberText.setText(getNumberSequence());
+	}
+	
 	public String getNumberSequence(){
-		String numbers = "";
-		for(int x : hash.unhashedTable){
-			numbers = numbers+x+" ";
-		}
-		return numbers;
+		return "Place the following into the table: " + currentNumber;
 	}
 
 }

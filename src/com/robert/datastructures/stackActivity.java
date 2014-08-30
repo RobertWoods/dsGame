@@ -7,6 +7,7 @@ import android.annotation.TargetApi;
 import android.app.Activity;
 import android.os.Build;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
@@ -22,6 +23,16 @@ public class stackActivity extends Activity {
 		setContentView(R.layout.activity_stack);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setStack();
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 
 	public void setStack(){

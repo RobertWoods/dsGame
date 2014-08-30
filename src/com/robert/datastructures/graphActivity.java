@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import structures.Graph;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -28,6 +29,16 @@ public class graphActivity extends Activity {
 		setContentView(R.layout.activity_graph);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setGraph();
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 	
 	public void setGraph(){

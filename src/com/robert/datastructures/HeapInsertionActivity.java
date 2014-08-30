@@ -3,6 +3,7 @@ package com.robert.datastructures;
 import structures.Heap;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -22,10 +23,21 @@ public class HeapInsertionActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.activity_heap_deletion);
 		heapSetup();
 		setInstr();
 		currentElement = (Button) findViewById(R.id.nodeDepth0);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 
 	public void heapSetup(){

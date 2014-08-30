@@ -5,6 +5,7 @@ import java.util.Random;
 import structures.Tree;
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -25,10 +26,21 @@ public class bstreeSetupActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
+		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setContentView(R.layout.bst_setup_activity);
 		createTree();
 		drawSequence();
 		activeNumber = sequence[0];
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 	
 	public void createTree(){

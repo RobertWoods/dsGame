@@ -5,6 +5,7 @@ public class Hash {
 	int[] table;
 	public int hash;
 	public int[] unhashedTable;
+	public int length=0;
 	
 	//Hash table key and value type is integer
 	
@@ -20,6 +21,7 @@ public class Hash {
 		int pos = ((num*hash)%table.length);
 		pos = linearProbe(pos);
 		table[pos]=num;
+		length++;
 	}
 	
 	//handles collision
@@ -46,6 +48,10 @@ public class Hash {
 		return entries;
 	}
 	
+	public void setEntries(){
+		unhashedTable = getEntries();
+	}
+	
 	//returns value at position pos
 	//O(1)
 	public int get(int pos){
@@ -70,6 +76,10 @@ public class Hash {
 			}
 		}
 		return pos;
+	}
+	
+	public void addNextEntry(){
+		add(unhashedTable[length]);
 	}
 	
 	//fills table with random ints

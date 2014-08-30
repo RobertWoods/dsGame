@@ -6,6 +6,7 @@ import structures.Tree;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.KeyEvent;
+import android.view.MenuItem;
 import android.view.inputmethod.EditorInfo;
 import android.widget.EditText;
 import android.widget.ImageView;
@@ -36,6 +37,16 @@ public class treeTraversalActivity extends Activity {
 		mTextView = (TextView) findViewById(R.id.textView1);
 		gameSetUp();
 		getActionBar().setDisplayHomeAsUpEnabled(true);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 
 	public void gameSetUp(){

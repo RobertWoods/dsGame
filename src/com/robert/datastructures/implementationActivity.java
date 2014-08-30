@@ -10,6 +10,7 @@ import android.text.method.LinkMovementMethod;
 import android.text.method.ScrollingMovementMethod;
 import android.text.style.ClickableSpan;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -35,6 +36,16 @@ public class implementationActivity extends Activity {
 		else setContentView(R.layout.activity_implementation);
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 		setText(key);
+	}
+	
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    switch (item.getItemId()) {
+	    case android.R.id.home:
+	        this.finish();
+	        return true;
+	    }
+	    return super.onOptionsItemSelected(item);
 	}
 	
 	public void setText(int key){

@@ -7,6 +7,7 @@ import android.app.ExpandableListActivity;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.widget.ExpandableListView;
 
 public class ExtandableListActivty extends ExpandableListActivity {
@@ -16,6 +17,7 @@ public class ExtandableListActivty extends ExpandableListActivity {
 	
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		ExpandableListView listview = new ExpandableListView(this);
 		listview.setDividerHeight(2);
 		listview.setGroupIndicator(null);
@@ -30,6 +32,7 @@ public class ExtandableListActivty extends ExpandableListActivity {
 		
 		
 	}
+	
 	
 	public void setGroupData(){
 		groupItem.add("Binary Tree");
